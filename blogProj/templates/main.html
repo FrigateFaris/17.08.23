@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="{% url 'main' %}" style="margin: 20px">Главная</a>
+    <a href="{% url 'create' %}">Создать Пост</a>
+    {% for values in blog %}
+        <p>{{ values }}</p>
+        <a href="{{ values.get_absolute_url }}">learn more</a>
+    <br><br><br>
+    {% endfor %}
+</body>
+</html>
